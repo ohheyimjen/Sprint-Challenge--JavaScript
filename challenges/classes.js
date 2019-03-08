@@ -8,14 +8,33 @@ class CuboidMaker{
     }
 }
 
-CuboidMaker.prototype.volume = function() {
-    return (length * width * height);
-  };
+// CuboidMaker.prototype.volume = function() {
+//     return (this.length * this.width * this.height);
+//   };
+  
+  class CubVolume extends CuboidMaker {
+    
+      constructor(vol) {
+        super(vol);
+        volume() {
+            return (this.length * this.width * this.height);
+        }
+      }
+  }
 
-  CuboidMaker.prototype.surfaceArea = function() {
-    return (2 * (length * width + length * height + width * height));
-  };
+//   CuboidMaker.prototype.surfaceArea = function() {
+//     return (2 * (this.length * this.width + this.length * this.height + this.width * this.height));
+//   };
 
+  class CubSurfArea extends CuboidMaker {
+    
+    constructor(area) {
+      super(area);
+      surfaceArea() {
+          return (2 * (this.length * this.width + this.length * this.height + this.width * this.height));
+      }
+    }
+}
   const cuboid = new CuboidMaker({
     length: 4,
     width: 5,
