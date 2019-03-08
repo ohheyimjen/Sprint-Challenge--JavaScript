@@ -40,6 +40,7 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 
 // Explanation: 
 
+//Because 'nestedFunction()' is in the same local scope as the 'internal' variable. If 'internal' was placed in the global scope, like 'external' is, 'nestedFunction()' would not be able to find/access it.
 
 const external = "I'm outside the function";
 
