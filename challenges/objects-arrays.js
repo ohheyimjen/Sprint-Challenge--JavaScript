@@ -131,6 +131,10 @@ zooAnimals.forEach(function(element) {
   return animalNames.push(`${element.animal_name} ${element.scientific_name}`);
 });
 
+zooAnimals.forEach((element) => {
+  return animalNames.push(`${element.animal_name} ${element.scientific_name}`);
+});
+
 console.log(animalNames);
 
 /* Request 2: .map()    
